@@ -13,7 +13,7 @@ const Timer = ({seconds, interval}) => {
         
 
         let sec = String(seconds)
-
+    if(seconds > 0){   
         if(sec.at(-interval)){
             return(
                 <span style={styles}>
@@ -24,10 +24,18 @@ const Timer = ({seconds, interval}) => {
             return (
                 <span style={styles}>
                     {0}
-                </span>)
+                </span>
+            )
             
         }
+    } else {
+        return(
+            <span style={styles}>
+                    {0}
+            </span>
+        )
         
+    }
         
         
         
